@@ -14,9 +14,9 @@ Fórmula: Calcula el PER dividiendo el Precio de Cierre (close) de la acción en
 Ventana Configurable: Incluye una entrada de usuario (input.int) llamada "Cantidad de Semanas" con un valor predeterminado de 260 semanas (aproximadamente 5 años). Este ajuste es crucial para adaptarlo al gráfico semanal, aunque puede modificarse para periodos más cortos o largos (ej. 156 semanas para 3 años).
 
 Líneas de Referencia Clave: Calcula y traza tres líneas horizontales dinámicas basadas en el PER dentro de la ventana seleccionada:
-🟢 PER Mínimo : La valoración más baja (más "barata") observada, trazada en verde.
-🔴 PER Máximo: La valoración más alta (más "cara") observada, trazada en rojo.
-⚪ PER Promedio : El promedio simple de todos los valores de PER dentro de la ventana, trazado en blanco (línea discontinua).
+-🟢 PER Mínimo : La valoración más baja (más "barata") observada, trazada en verde.
+-🔴 PER Máximo: La valoración más alta (más "cara") observada, trazada en rojo.
+-⚪ PER Promedio : El promedio simple de todos los valores de PER dentro de la ventana, trazado en blanco (línea discontinua).
 
 3. Visualización y Usabilidad
 PER Actual: El valor del PER en cada barra se traza con una línea amarilla, pero se restringe su visibilidad para mostrarse únicamente dentro de la ventana de tiempo definida, manteniendo el gráfico limpio y enfocado.
@@ -24,16 +24,19 @@ PER Actual: El valor del PER en cada barra se traza con una línea amarilla, per
 - Etiquetas de Valores: En la barra más reciente (barstate.islast), se añaden etiquetas (label.new) a la derecha del gráfico para mostrar los valores numéricos exactos del PER Mínimo, Promedio y Máximo con dos decimales de precisión.
 
 Cómo Utilizar el Indicador
+--------------------------
 Este indicador es ideal para el análisis de regresión a la media y la identificación de zonas de valoración extrema.
 
 Configuración del Gráfico: Para el uso predeterminado de 260 semanas, se recomienda utilizar el gráfico semanal (W). Si se ajusta la entrada de semanas a un período más corto (ej. 52 semanas), puede ser útil cambiar a un marco de tiempo diario (D) para una vista más detallada, aunque la métrica TTM se actualiza con la frecuencia de los reportes financieros.
 
-Identificación de Oportunidades:
+Identificación de Oportunidades
+-------------------------------
 - Cuando el PER Actual se acerca o cruza la Línea de PER Mínimo (Verde), podría indicar que el activo está históricamente subvalorado, sugiriendo una posible oportunidad de compra.
 - Cuando el PER Actual se acerca o cruza la Línea de PER Máximo (Rojo), podría indicar que el activo está históricamente sobrevalorado, sugiriendo una posible oportunidad de venta o de toma de ganancias.
 - Contextualización: El PER Promedio (Blanco) sirve como punto de referencia central para evaluar si la valoración actual es superior o inferior a su norma histórica reciente.
 
 Parámetros de Configuración
+---------------------------
 Cantidad de Semanas por defecto: 260
 
 Realizado por Claudio Hernán Caparroz 
