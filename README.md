@@ -14,9 +14,9 @@ Fórmula: Calcula el PER dividiendo el Precio de Cierre (close) de la acción en
 Ventana Configurable: Incluye una entrada de usuario (input.int) llamada "Cantidad de Semanas" con un valor predeterminado de 260 semanas (aproximadamente 5 años). Este ajuste es crucial para adaptarlo al gráfico semanal, aunque puede modificarse para periodos más cortos o largos (ej. 156 semanas para 3 años).
 
 Líneas de Referencia Clave: Calcula y traza tres líneas horizontales dinámicas basadas en el PER dentro de la ventana seleccionada:
--🟢 PER Mínimo : La valoración más baja (más "barata") observada, trazada en verde.
--🔴 PER Máximo: La valoración más alta (más "cara") observada, trazada en rojo.
--⚪ PER Promedio : El promedio simple de todos los valores de PER dentro de la ventana, trazado en blanco (línea discontinua).
+* *🟢 PER Mínimo : La valoración más baja (más "barata") observada, trazada en verde.
+* *🔴 PER Máximo: La valoración más alta (más "cara") observada, trazada en rojo.
+* *⚪ PER Promedio : El promedio simple de todos los valores de PER dentro de la ventana, trazado en blanco (línea discontinua).
 
 3. Visualización y Usabilidad
 PER Actual: El valor del PER en cada barra se traza con una línea amarilla, pero se restringe su visibilidad para mostrarse únicamente dentro de la ventana de tiempo definida, manteniendo el gráfico limpio y enfocado.
