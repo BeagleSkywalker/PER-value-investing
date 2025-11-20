@@ -5,7 +5,7 @@ El PER es una métrica de valoración fundamental que compara el precio de merca
 
 Características Clave y Componentes
 -----------------------------------
-1. Cálculo del PER (Price-Earnings Ratio)
+1. Cálculo del PER (Price-Earnings Ratio)\n
 Fuentes de Datos: Utiliza la función request.financial de TradingView para obtener las Ganancias por Acción (EPS) bajo el método "Trailing Twelve Months" (TTM), asegurando que el cálculo del PER se base en datos financieros recientes y estandarizados.
 
 Fórmula: Calcula el PER dividiendo el Precio de Cierre (close) de la acción entre el EPS (TTM).
