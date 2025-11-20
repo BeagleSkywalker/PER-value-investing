@@ -4,6 +4,7 @@ El indicador "PE Ratio Capa Investing" es una herramienta esencial para el anál
 El PER es una métrica de valoración fundamental que compara el precio de mercado de una acción con sus ganancias por acción (EPS). Este indicador va más allá del simple cálculo del PER actual, mostrando dinámicamente el PER Mínimo, PER Promedio y PER Máximo observados durante el período seleccionado, lo que permite a los inversores contextualizar la valoración actual del activo.
 
 Características Clave y Componentes
+-----------------------------------
 1. Cálculo del PER (Price-Earnings Ratio)
 Fuentes de Datos: Utiliza la función request.financial de TradingView para obtener las Ganancias por Acción (EPS) bajo el método "Trailing Twelve Months" (TTM), asegurando que el cálculo del PER se base en datos financieros recientes y estandarizados.
 
