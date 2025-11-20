@@ -6,12 +6,11 @@ El PER es una métrica de valoración fundamental que compara el precio de merca
 Características Clave y Componentes
 -----------------------------------
 1. Cálculo del PER (Price-Earnings Ratio)
-.........................................
 Fuentes de Datos: Utiliza la función request.financial de TradingView para obtener las Ganancias por Acción (EPS) bajo el método "Trailing Twelve Months" (TTM), asegurando que el cálculo del PER se base en datos financieros recientes y estandarizados.
 
 Fórmula: Calcula el PER dividiendo el Precio de Cierre (close) de la acción entre el EPS (TTM).
 
-2. Análisis Histórico de la Ventana de Tiempo
+3. Análisis Histórico de la Ventana de Tiempo
 Ventana Configurable: Incluye una entrada de usuario (input.int) llamada "Cantidad de Semanas" con un valor predeterminado de 260 semanas (aproximadamente 5 años). Este ajuste es crucial para adaptarlo al gráfico semanal, aunque puede modificarse para periodos más cortos o largos (ej. 156 semanas para 3 años).
 
 Líneas de Referencia Clave: Calcula y traza tres líneas horizontales dinámicas basadas en el PER dentro de la ventana seleccionada:
