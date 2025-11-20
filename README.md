@@ -1,4 +1,5 @@
 Descripción General del Indicador
+=================================
 El indicador "PE Ratio Capa Investing" es una herramienta esencial para el análisis fundamental, que proporciona una visión clara del Ratio Precio/Beneficio (PER) histórico de un activo financiero dentro de una ventana de tiempo configurable.
 El PER es una métrica de valoración fundamental que compara el precio de mercado de una acción con sus ganancias por acción (EPS). Este indicador va más allá del simple cálculo del PER actual, mostrando dinámicamente el PER Mínimo, PER Promedio y PER Máximo observados durante el período seleccionado, lo que permite a los inversores contextualizar la valoración actual del activo.
 
