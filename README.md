@@ -5,20 +5,20 @@ El PER es una métrica de valoración fundamental que compara el precio de merca
 
 Características Clave y Componentes
 -----------------------------------
-1. Cálculo del PER (Price-Earnings Ratio):
+_1. Cálculo del PER (Price-Earnings Ratio):_
 Fuentes de Datos: Utiliza la función request.financial de TradingView para obtener las Ganancias por Acción (EPS) bajo el método "Trailing Twelve Months" (TTM), asegurando que el cálculo del PER se base en datos financieros recientes y estandarizados.
 
 Fórmula: Calcula el PER dividiendo el Precio de Cierre (close) de la acción entre el EPS (TTM).
 
-3. Análisis Histórico de la Ventana de Tiempo
+_2. Análisis Histórico de la Ventana de Tiempo_
 Ventana Configurable: Incluye una entrada de usuario (input.int) llamada "Cantidad de Semanas" con un valor predeterminado de 260 semanas (aproximadamente 5 años). Este ajuste es crucial para adaptarlo al gráfico semanal, aunque puede modificarse para periodos más cortos o largos (ej. 156 semanas para 3 años).
 
 Líneas de Referencia Clave: Calcula y traza tres líneas horizontales dinámicas basadas en el PER dentro de la ventana seleccionada:
-* *🟢 PER Mínimo : La valoración más baja (más "barata") observada, trazada en verde.
-* *🔴 PER Máximo: La valoración más alta (más "cara") observada, trazada en rojo.
-* *⚪ PER Promedio : El promedio simple de todos los valores de PER dentro de la ventana, trazado en blanco (línea discontinua).
+* 🟢 PER Mínimo : La valoración más baja (más "barata") observada, trazada en verde.
+* 🔴 PER Máximo: La valoración más alta (más "cara") observada, trazada en rojo.
+* ⚪ PER Promedio : El promedio simple de todos los valores de PER dentro de la ventana, trazado en blanco (línea discontinua).
 
-3. Visualización y Usabilidad
+_3. Visualización y Usabilidad_
 PER Actual: El valor del PER en cada barra se traza con una línea amarilla, pero se restringe su visibilidad para mostrarse únicamente dentro de la ventana de tiempo definida, manteniendo el gráfico limpio y enfocado.
 - Línea de Inicio de Ventana: Se utiliza una Línea Vertical Blanca para marcar con precisión el punto exacto en el tiempo donde comienza el cálculo de la ventana histórica (ej. el inicio de las 260 semanas).
 - Etiquetas de Valores: En la barra más reciente (barstate.islast), se añaden etiquetas (label.new) a la derecha del gráfico para mostrar los valores numéricos exactos del PER Mínimo, Promedio y Máximo con dos decimales de precisión.
@@ -39,6 +39,6 @@ Parámetros de Configuración
 ---------------------------
 Cantidad de Semanas por defecto: 260
 
-Realizado por Claudio Hernán Caparroz 
+*Realizado por Claudio Hernán Caparroz*
 Youtube : Capa Investing 
 https://www.youtube.com/@CapaInvesting
