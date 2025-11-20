@@ -1,0 +1,61 @@
+//@version=6
+indicator("PE Ratio Capa Investing ver 1.0", scale=scale.right)
+
+PERindicatorver = 1.0
+
+// Obtenemos las ganancias por acción (EPS)
+EPS = request.financial(syminfo.tickerid, "EARNINGS_PER_SHARE", "TTM")
+
+// Calculamos el PER (Price Earnings Ratio)
+PriceEarningsRatio = close / EPS
+
+// Definimos la ventana de tiempo para el cálculo del PER
+windowLength = input.int(defval=260, title="Cantidad de Semanas", minval=1)
+
+// Calculamos el PER mínimo, máximo y promedio basado en la ventana de tiempo
+min_per = ta.lowest(PriceEarningsRatio, windowLength)
+max_per = ta.highest(PriceEarningsRatio, windowLength)
+avg_per = ta.sma(PriceEarningsRatio, windowLength)
+
+// Declaramos las variables de las líneas para que persistan
+var line minLine = na
+var line maxLine = na
+var line avgLine = na
+
+// Creamos las líneas solo si tenemos un valor válido
+if not na(min_per) and not na(avg_per) and not na(max_per) and barstate.islast
+    minLine := line.new(x1=bar_index, y1=min_per, x2=bar_index + 1, y2=min_per, xloc=xloc.bar_index, extend=extend.both, color=color.green, style=line.style_solid, width=2)
+    maxLine := line.new(x1=bar_index, y1=max_per, x2=bar_index + 1, y2=max_per, xloc=xloc.bar_index, extend=extend.both, color=color.red, style=line.style_solid, width=2)
+    avgLine := line.new(x1=bar_index, y1=avg_per, x2=bar_index + 1, y2=avg_per, xloc=xloc.bar_index, extend=extend.both, color=color.new(#ffffff, 0), style=line.style_dashed, width=1)
+else
+    // Actualizamos las líneas en cada nueva barra para que se extiendan
+    if not na(minLine)
+        line.set_x2(minLine, bar_index + 1)
+        line.set_x2(maxLine, bar_index + 1)
+        line.set_x2(avgLine, bar_index + 1)
+
+// Trazamos el PER actual, y lo ocultamos si está fuera de la ventana
+// plot(ta.ema(PriceEarningsRatio, 1) != 0 ? PriceEarningsRatio : na, color=color.new(#ffd000, 0), linewidth=1, title="PER Actual")
+
+// Definimos una variable para mostrar el PER solo en la ventana deseada
+visiblePER = bar_index >= (bar_index[1] - windowLength) ? PriceEarningsRatio : na
+
+// Dibujamos el PER actual, visible solo en la ventana de tiempo
+plot(visiblePER, color=color.new(#ffd000, 0), linewidth=1, title="PER Actual")
+
+// --- LÍNEA VERTICAL ---
+// Se crea una línea vertical usando 'line.new()'
+// Se traza en la posición 'bar_index - windowLength + 1' para que se ubique al inicio de la ventana
+var line verticalLine = na
+if barstate.islast
+    line.delete(verticalLine)
+    verticalLine := line.new(x1=bar_index - windowLength + 1, y1=low, x2=bar_index - windowLength + 1, y2=high, extend=extend.both, color=color.white, style=line.style_solid, width=1)
+
+
+// --- AGREGAR VALORES A LAS LÍNEAS ---
+if barstate.islast
+    label.new(x=bar_index, y=min_per, text=str.tostring(min_per, "##.##"), xloc=xloc.bar_index, color=color.green, textcolor=color.white, style=label.style_label_left, size=size.small)
+
+    label.new(x=bar_index, y=avg_per, text=str.tostring(avg_per, "##.##"), xloc=xloc.bar_index, color=color.white, textcolor=color.black, style=label.style_label_left, size=size.small)
+
+    label.new(x=bar_index, y=max_per, text=str.tostring(max_per, "##.##"), xloc=xloc.bar_index, color=color.red, textcolor=color.white, style=label.style_label_left, size=size.small)
