@@ -1,6 +1,6 @@
 IMPORTANTE
 ==========
-Dejar un correo de contacto preferentemente para recibir actualizaciones por email de algun cambio de version.
+Dejar un correo de contacto para recibir actualizaciones por email de algún cambio de versión.
 Aqui: https://forms.gle/rUXv3Dh5JRwF1hLV6
 
 Descripción General del Indicador
