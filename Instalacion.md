@@ -1,6 +1,9 @@
 # Como instalar el indicador en Trading View
 Mi recomendación es verlo aqui : link a youtube
 
+## Links
+https://github.com/BeagleSkywalker/PER-value-investing
+
 ## Los pasos son simples:
 1. Abrir desde Github el archivo "PE-Ratio_Capa_Investing.pine".
 2. Abrir Trading View, seleccionar cualquier compañia y abrir el gráfico de velas.
