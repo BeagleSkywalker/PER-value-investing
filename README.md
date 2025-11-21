@@ -1,7 +1,7 @@
 IMPORTANTE
 ==========
 Dejar un correo de contacto preferentemente para recibir actualizaciones por email de algun cambio de version.
-Aqui: 
+Aqui: https://forms.gle/rUXv3Dh5JRwF1hLV6
 
 Descripción General del Indicador
 =================================
