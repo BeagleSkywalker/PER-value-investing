@@ -1,3 +1,8 @@
+IMPORTANTE
+==========
+Dejar un correo de contacto preferentemente para recibir actualizaciones por email de algun cambio de version.
+Aqui: 
+
 Descripción General del Indicador
 =================================
 El indicador "PE Ratio Capa Investing" es una herramienta esencial para el análisis fundamental, que proporciona una visión clara del Ratio Precio/Beneficio (PER) histórico de un activo financiero dentro de una ventana de tiempo configurable.
