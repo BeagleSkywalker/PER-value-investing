@@ -3,6 +3,7 @@ Mi recomendación es verlo aqui : link a youtube
 
 ## Links
 https://github.com/BeagleSkywalker/PER-value-investing
+https://forms.gle/x6HwfSvB3aC35bYo8
 
 ## Los pasos son simples:
 1. Abrir desde Github el archivo "PE-Ratio_Capa_Investing.pine".
