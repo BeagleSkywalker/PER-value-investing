@@ -1,5 +1,5 @@
 # Como instalar el indicador en Trading View
-Mi recomendación es verlo aqui : link a youtube
+Mi recomendación es verlo aqui : [link a youtube](https://youtu.be/yaNoA19auDg)
 
 ## Links
 https://github.com/BeagleSkywalker/PER-value-investing
